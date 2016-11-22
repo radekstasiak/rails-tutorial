@@ -10,6 +10,7 @@ class ApiTranslationController < BaseApiController
 		@translateLang = params[:tl]
 		@params = '?client=gtx&sl='+@sourceLang+'&tl='+@translateLang+'&dt=at&dt=bd&dt=ex&dt=ld&dt=md&dt=qca&dt=rw&dt=rm&dt=ss&dt=t'+'&q='+@word
 		response = HTTParty.post('https://translate.googleapis.com/translate_a/single'+@params)
+
 		case response.code
 		when 200
 			@jsonArray=response.body
@@ -23,6 +24,7 @@ class ApiTranslationController < BaseApiController
 		else
 			@result=response.code
 		end
+		
 		
 		#render :json => {:type => @result}
 		render :json => {:statusCode =>response.code.to_s,
