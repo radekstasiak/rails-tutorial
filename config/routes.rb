@@ -53,4 +53,18 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+   root 'welcome#index'
+    scope '/api' do
+      scope '/v1' do
+        scope 'translate' do
+          scope 'full' do
+            post '/' => 'api_translation#full_translation'
+          end
+        end
+      end
+    end
+
+
+
 end
