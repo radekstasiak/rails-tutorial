@@ -1,8 +1,4 @@
-class WelcomeController < BaseApiController
-def index
-
-render template: "layouts/application"
+class WelcomeController < ApplicationController
+  def index
+  end
 end
-end
-
-
