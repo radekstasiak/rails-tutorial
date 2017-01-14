@@ -51,4 +51,4 @@ group :development do
 end
 
 gem 'httparty'
-
+gem 'rails-controller-testing'

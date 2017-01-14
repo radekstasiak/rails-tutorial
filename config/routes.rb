@@ -57,6 +57,8 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  get  '/signup',  to: 'users#new'
+  post '/signup',  to: 'users#create'
 
    root 'welcome#index'
     scope '/api' do
@@ -68,6 +70,9 @@ Rails.application.routes.draw do
         end
       end
     end
+    
+    resources :users
+
 
 
 
