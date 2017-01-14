@@ -52,3 +52,4 @@ end
 
 gem 'httparty'
 gem 'rails-controller-testing'
+gem 'puma'
