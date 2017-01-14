@@ -26,3 +26,6 @@ coverage
 .tern-port
 *.log
 /public/system
+
+.byebug_history
+
