@@ -9,6 +9,12 @@ class SessionsController < ApplicationController
     end
   end
 
+  def destroy
+    log_out
+    redirect_to root_url
+    flash.now[:success] = "You were sucessfully logged out"
+  end
+
   def create
   	user = User.find_by(email: params[:session][:email].downcase)
   	if user && user.authenticate(params[:session][:password])
