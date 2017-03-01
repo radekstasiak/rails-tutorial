@@ -6,5 +6,4 @@ Chapter 9: Advanced login <br />
 Chapter 10: Updating, showing and deleting users <br />
 Chapter 11: Account activation <br />
 Chapter 12: Password reset <br />
-to get rest client output <br />
-export RESTCLIENT_LOG='stdout' <br />
+
